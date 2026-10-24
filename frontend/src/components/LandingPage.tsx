@@ -242,7 +242,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
           </div>
           
           <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-            <p>&copy; 2024 MessHub. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} MessHub. All rights reserved to Yash Dargad.</p>
           </div>
         </div>
       </footer>

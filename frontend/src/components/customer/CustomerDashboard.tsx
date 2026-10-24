@@ -228,6 +228,10 @@ const CustomerDashboard: React.FC = () => {
           </>
         )}
       </div>
+
+      <footer className="mt-12 py-6 border-t border-gray-200 text-center text-sm text-gray-500">
+        <p>&copy; {new Date().getFullYear()} MessHub. All rights reserved to Yash Dargad.</p>
+      </footer>
     </div>
   );
 };

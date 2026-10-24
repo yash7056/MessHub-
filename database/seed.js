@@ -3,7 +3,17 @@ import dotenv from 'dotenv';
 import User from './models/User.js';
 import Mess from './models/Mess.js';
 
-dotenv.config({ path: '../backend/.env' });
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+dotenv.config({ path: path.resolve(__dirname, '../backend/.env') });
+import dns from 'dns';
+
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch (e) {}
 
 // We only seed default customer accounts so they can log in immediately
 // to see the empty list of messes without having to register a student first.
