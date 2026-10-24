@@ -70,8 +70,8 @@ FEP/
 By default, the application connects to your MongoDB Atlas database. You can modify this in `backend/.env`:
 ```env
 PORT=5001
-MONGO_URI=mongodb+srv://yashdargad:9156647056@cluster0.tmiudie.mongodb.net/messhub?appName=Cluster0
-JWT_SECRET=messhub_jwt_secret_key_123
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.yourcluster.mongodb.net/messhub?appName=Cluster0
+JWT_SECRET=your_jwt_secret_key_here
 ```
 
 ### 2. File Organization
