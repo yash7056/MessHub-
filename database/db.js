@@ -17,10 +17,14 @@ try {
 }
 
 export const connectDB = async () => {
+  if (mongoose.connection.readyState === 1) {
+    return mongoose.connection;
+  }
   try {
     const connStr = process.env.MONGO_URI || 'mongodb://localhost:27017/messhub';
     await mongoose.connect(connStr);
     console.log('Connected to MongoDB database successfully');
+    return mongoose.connection;
   } catch (err) {
     console.error('Database connection error:', err);
     throw err;
